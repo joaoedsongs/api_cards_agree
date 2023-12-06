@@ -20,7 +20,7 @@ class CardController extends Controller{
             });
         }
 
-        // Filtrar por rareza
+        // Filtrar por rareza test
         if ($request->has('rareza')) {
             $query->whereHas('rarity', function ($query) use ($request) {
                 $query->where('name', $request->input('rareza'));
