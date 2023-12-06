@@ -15,8 +15,12 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         \App\Models\User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Test User One',
+            'email' => 'back@example.com',
+        ]);
+        \App\Models\User::factory()->create([
+            'name' => 'Test User Two',
+            'email' => 'front@example.com',
         ]);
         $this->call(ExpansionSeeder::class);
         $this->call(RaritySeeder::class);
