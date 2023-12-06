@@ -50,9 +50,7 @@ class CardController extends Controller{
 
         $cards = $query->get();
 
-        return response()->json([
-            'data' => $cards
-        ], 200);
+        return response()->json($cards, 200);
     }
 
     public function store(CardRequest $request){
@@ -119,9 +117,9 @@ class CardController extends Controller{
     }
 
     public function show(Card $card){
-        return response()->json([
-            'data' => $card->load(['types', 'rarity', 'expansion'])
-        ], 200);
+        return response()->json(
+            $card->load(['types', 'rarity', 'expansion'])
+        , 200);
     }
 
     public function destroy(Card $card){

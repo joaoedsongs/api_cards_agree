@@ -25,7 +25,7 @@ class CardRequest extends FormRequest{
     public function rules(): array {
         return [
             'name' => 'required|string|max:55',
-            'hp' => 'required',
+            'hp' => 'required|numeric|multiple_of:10',
             'first_edition' => 'required|boolean',
             'expansion_id' => 'required|numeric|exists:expansions,id',
             'rarity_id' => 'required|numeric|exists:rarities,id',

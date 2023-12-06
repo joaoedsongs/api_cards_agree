@@ -21,4 +21,10 @@ class Card extends Model
             return $this->hasOne(Expansion::class, 'id', 'expansion_id');
         }
 
+    # Casts
+        protected $casts = [
+            'created_at' => 'datetime:d-m-Y',
+            'updated_at' => 'datetime:d-m-Y',
+        ];
+
 }
