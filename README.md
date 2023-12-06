@@ -8,6 +8,9 @@ php artisan storage:link
 
 cp .env.example .env
 
+CONFIGURAR .env
+base de datos
+
 php artisan key:generate
 
 php artisan migrate --seed
